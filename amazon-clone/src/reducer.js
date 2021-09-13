@@ -16,6 +16,12 @@ const reducer = (state, action) => {
                 ...state, //return  whatever the state originally was
                 basket: [...state.basket, action.item],
             };
+
+        case "EMPTY_BASKET":
+            return {
+               ...state,
+               basket: [] 
+            }
         case 'REMOVE_FROM_BASKET':
             //goes through every basketItem and checks any of them has id matches with action id
             // this only finds the first match
